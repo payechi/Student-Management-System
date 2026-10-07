@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Marks - Student Management System</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">
+        🎓
+        <span>Student Management</span>
+    </div>
+
+    <ul class="menu">
+
+        <li>
+            <a href="dashboard.html">🏠 Dashboard</a>
+        </li>
+
+        <li>
+            <a href="students.html">👨‍🎓 Students</a>
+        </li>
+
+        <li>
+            <a href="add-student.html">➕ Add Student</a>
+        </li>
+
+        <li class="active">
+            <a href="marks.html">📊 Marks</a>
+        </li>
+
+        <li>
+            <a href="marksheet.html">📋 Marksheet</a>
+        </li>
+
+        <li>
+            <a href="courses.html">📚 Courses</a>
+        </li>
+
+        <li>
+            <a href="settings.html">⚙ Settings</a>
+        </li>
+
+        <li>
+            <a href="#" onclick="logout()">🚪 Logout</a>
+        </li>
+
+    </ul>
+
+</aside>
+
+
+<main class="main-content">
+
+<header class="top-header">
+
+    <div>
+
+        <h2>Marks</h2>
+
+        <p>
+            Manage student academic marks
+        </p>
+
+    </div>
+
+    <div class="profile">
+
+        <div class="profile-icon">
+            M
+        </div>
+
+        <div>
+            <strong>Admin</strong>
+            <small>Administrator</small>
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="page-header">
+
+    <div>
+
+        <h1>
+            Marks Management
+        </h1>
+
+        <p>
+            Enter and manage student subject marks.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="content-card">
+
+<form id="marksForm">
+
+    <div class="form-grid">
+
+        <div class="form-group">
+
+            <label>
+                Select Student
+            </label>
+
+            <select id="marksStudent"
+                    required>
+
+                <option value="">
+                    Select Student
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Subject
+            </label>
+
+            <select id="subject"
+                    required>
+
+                <option value="">
+                    Select Subject
+                </option>
+
+                <option>
+                    Mathematics
+                </option>
+
+                <option>
+                    Physics
+                </option>
+
+                <option>
+                    Chemistry
+                </option>
+
+                <option>
+                    Computer Science
+                </option>
+
+                <option>
+                    English
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Internal Marks
+            </label>
+
+            <input
+                type="number"
+                id="internalMarks"
+                min="0"
+                max="40"
+                required
+                placeholder="0 - 40"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                External Marks
+            </label>
+
+            <input
+                type="number"
+                id="externalMarks"
+                min="0"
+                max="60"
+                required
+                placeholder="0 - 60"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="form-actions">
+
+        <button
+            type="reset"
+            class="btn btn-secondary">
+
+            Clear
+
+        </button>
+
+        <button
+            type="submit"
+            class="btn btn-primary">
+
+            Save Marks
+
+        </button>
+
+    </div>
+
+</form>
+
+</section>
+
+
+<section class="content-card">
+
+    <div class="card-header">
+
+        <div>
+            <h2>Marks Records</h2>
+
+            <p>
+                Recently entered marks
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Student</th>
+                    <th>Subject</th>
+                    <th>Internal</th>
+                    <th>External</th>
+                    <th>Total</th>
+                    <th>Grade</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="marksTable">
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Student Management System
+    </p>
+
+    <p>
+        HTML • CSS • JavaScript
+    </p>
+
+</footer>
+
+</main>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

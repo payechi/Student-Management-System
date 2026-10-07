@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Student Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">
+        🎓
+        <span>Student Management</span>
+    </div>
+
+    <ul class="menu">
+
+        <li class="active">
+            <a href="dashboard.html">🏠 Dashboard</a>
+        </li>
+
+        <li>
+            <a href="students.html">👨‍🎓 Students</a>
+        </li>
+
+        <li>
+            <a href="add-student.html">➕ Add Student</a>
+        </li>
+
+        <li>
+            <a href="marks.html">📊 Marks</a>
+        </li>
+
+        <li>
+            <a href="marksheet.html">📋 Marksheet</a>
+        </li>
+
+        <li>
+            <a href="courses.html">📚 Courses</a>
+        </li>
+
+        <li>
+            <a href="settings.html">⚙ Settings</a>
+        </li>
+
+        <li>
+            <a href="#" onclick="logout()">🚪 Logout</a>
+        </li>
+
+    </ul>
+
+</aside>
+
+
+<main class="main-content">
+
+    <header class="top-header">
+
+        <div>
+            <h2>Dashboard</h2>
+
+            <p>
+                Welcome to Student Management System
+            </p>
+        </div>
+
+        <div class="profile">
+
+            <div class="profile-icon">
+                M
+            </div>
+
+            <div>
+                <strong>Admin</strong>
+                <small>Administrator</small>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <section class="welcome-banner">
+
+        <div>
+
+            <h1>
+                Student Management System
+            </h1>
+
+            <p>
+                Manage your students, courses and academic
+                information efficiently.
+            </p>
+
+        </div>
+
+        <div class="banner-icon">
+            🎓
+        </div>
+
+    </section>
+
+
+    <section class="statistics">
+
+        <div class="stat-card">
+
+            <div class="stat-icon blue">
+                👨‍🎓
+            </div>
+
+            <div>
+                <p>Total Students</p>
+                <h2 id="totalStudents">0</h2>
+                <span>Registered students</span>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon green">
+                ✓
+            </div>
+
+            <div>
+                <p>Active Students</p>
+                <h2 id="activeStudents">0</h2>
+                <span>Active students</span>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon red">
+                !
+            </div>
+
+            <div>
+                <p>Inactive Students</p>
+                <h2 id="inactiveStudents">0</h2>
+                <span>Need attention</span>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon purple">
+                📚
+            </div>
+
+            <div>
+                <p>Total Courses</p>
+                <h2 id="totalCourses">0</h2>
+                <span>Available courses</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="quick-actions">
+
+        <div class="section-title">
+
+            <h2>Quick Actions</h2>
+
+            <p>
+                Common tasks you might want to perform
+            </p>
+
+        </div>
+
+
+        <div class="action-container">
+
+            <a href="students.html" class="action-card">
+
+                <div class="action-icon">
+                    👨‍🎓
+                </div>
+
+                <div>
+                    <h3>View All Students</h3>
+
+                    <p>
+                        Browse and manage student records
+                    </p>
+                </div>
+
+            </a>
+
+
+            <a href="add-student.html" class="action-card">
+
+                <div class="action-icon">
+                    ➕
+                </div>
+
+                <div>
+                    <h3>Add New Student</h3>
+
+                    <p>
+                        Register a new student
+                    </p>
+                </div>
+
+            </a>
+
+
+            <a href="courses.html" class="action-card">
+
+                <div class="action-icon">
+                    📚
+                </div>
+
+                <div>
+                    <h3>Manage Courses</h3>
+
+                    <p>
+                        View and edit course information
+                    </p>
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="recent-section">
+
+        <div class="section-title">
+
+            <h2>Recent Students</h2>
+
+            <p>
+                Recently registered students
+            </p>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="recentStudentsTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 Student Management System
+        </p>
+
+        <p>
+            HTML • CSS • JavaScript
+        </p>
+
+    </footer>
+
+</main>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - Student Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page register-page">
+
+<div class="register-container">
+    <div class="register-card">
+        <div class="login-logo">🎓</div>
+        <h1>Student Registration</h1>
+        <p class="login-subtitle">Create your student account</p>
+
+        <form id="registrationForm">
+            <div class="form-section">
+                <h3>Student Information</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="studentId">Student ID *</label>
+                        <input id="studentId" type="text" placeholder="Enter student ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input id="fullName" type="text" placeholder="Enter full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth *</label>
+                        <input id="dob" type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender *</label>
+                        <select id="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input id="phone" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input id="email" type="email" placeholder="student@example.com" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="address">Address *</label>
+                        <textarea id="address" rows="3" placeholder="Enter address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Course *</label>
+                        <select id="course" required>
+                            <option value="">Select Course</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="admissionDate">Admission Date *</label>
+                        <input id="admissionDate" type="date" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section account-section">
+                <h3>Login Details</h3>
+                <p class="account-help">Choose the username and password you want to use when logging in.</p>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="registerUsername">Username *</label>
+                        <input id="registerUsername" type="text" placeholder="Create your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Password *</label>
+                        <input id="registerPassword" type="password" minlength="6" placeholder="Create your password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password *</label>
+                        <input id="confirmPassword" type="password" minlength="6" placeholder="Confirm your password" required>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Register</button>
+        </form>
+
+        <p class="login-footer">Already registered? <a href="login.html">Login here</a></p>
+        <p class="login-footer">© 2026 Student Management System</p>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
